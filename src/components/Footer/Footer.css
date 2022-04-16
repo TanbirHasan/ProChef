@@ -1,0 +1,18 @@
+
+
+
+
+
+.inner-footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #283747;
+    height: 50vh;
+
+}
+
+.inner-footer img{
+    width: 120px;
+    height: 130px;
+}
