@@ -1,0 +1,36 @@
+
+.Slider{
+    background-color:#AEB6BF;
+    
+}
+
+
+.Slider .Wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 90px;
+  
+    align-items: center;
+ 
+}
+
+.Slider .Wrapper .image{
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.leftSlider{
+    width: 40%;
+}
+
+.rightTitle{
+    padding: 80px;
+}
+
+.rightTitle p{
+    font-size: 18px;
+    font-weight: 500;
+}
