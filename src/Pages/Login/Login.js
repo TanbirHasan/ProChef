@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import "./Login.css";
@@ -9,6 +9,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from '../../Auth/firebase.init';
+import Sociallogin from '../SocialLogin/Sociallogin';
 
 const Login = () => {
 
@@ -37,20 +38,42 @@ const Login = () => {
     return (
       <div>
         <Header />
-        <div className="FormWrapper">
-          <div className="form">
-            <form onSubmit={handleSubmit}>
-              <input placeholder="Enter your Email" ref={emailref} required />
-              <input placeholder="Enter your Password" ref={passref} required />
+        <Sociallogin />
+        <div className="d-flex justify-content-center">
+          <div className="w-50 mt-5">
+            <Form
+              className="w-50 mx-auto"
+              style={{
+                background: "#CB4335",
+                padding: "30px",
+                marginBottom: "30px",
+              }}
+              onSubmit={handleSubmit}
+            >
+              <Form.Group className="mb-3 " controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Enter email"
+                  ref={emailref}
+                  required
+                />
+              </Form.Group>
 
-              <Button type="submit" className="button">Register</Button>
-            </form>
-          </div>
-          <div className="image">
-            <img
-              src="https://www.daysoftheyear.com/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cheight=675%2Cmetadata=none%2Conerror=redirect%2Cq=85%2Cwidth=1200/wp-content/uploads/national-fast-food-day.jpg"
-              alt="food"
-            />
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  ref={passref}
+                  required
+                />
+              </Form.Group>
+
+              <Button variant="primary" type="submit">
+                Login
+              </Button>
+            </Form>
           </div>
         </div>
         <Footer />

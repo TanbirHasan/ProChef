@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDOcU8cs4Y3b93mYFSwRQVCZvRxkWfbtas",
-  authDomain: "food-hut-6117a.firebaseapp.com",
-  projectId: "food-hut-6117a",
-  storageBucket: "food-hut-6117a.appspot.com",
-  messagingSenderId: "244627256883",
-  appId: "1:244627256883:web:29c77390ea6e03082ed546",
+  apiKey:process.env.REACT_APP_apikey,
+  authDomain:process.env.REACT_APP_authdomain,
+  projectId:process.env.REACT_APP_projectId,
+  storageBucket:process.env.REACT_APP_storageBucket,
+  messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  appId:process.env.REACT_APP_appid
 };
 
 // Initialize Firebase
@@ -20,4 +20,3 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 export default auth;
-
