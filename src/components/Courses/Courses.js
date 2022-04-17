@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import "./Courses.css";
+import Spoon from "../../Images/res_logo.png";
+import SingleCourses from '../SingleCourses/SingleCourses';
 
 const Courses = () => {
 
@@ -13,26 +15,14 @@ const Courses = () => {
     },[])
     return (
       <div className="Courses">
-          <h2 className='text-center mt-5'>Populer Classes</h2>
+        <div className='top-portion'>
+          <h2 className="text-center mt-5">Populer Classes</h2>
+          <img src={Spoon} alt="spoon" className="spoon" />
+        </div>
+
         <div className="WrapperCourse">
           {course.map((course) => (
-            <Card
-              style={{ width: "18rem", margin: "20px 15px", padding: "5px" }}
-              key={course.id}
-            >
-              <Card.Img variant="top" src={course.img} />
-              <Card.Body>
-                <Card.Title>{course.name}</Card.Title>
-                <Card.Text>Duration : {course.duration}</Card.Text>
-                <Card.Text>Price : {course.price}</Card.Text>
-                <Button
-                  variant="primary"
-                  style={{ width: "100%", background: "#C0392B ",border:"none" }}
-                >
-                  Buy now
-                </Button>
-              </Card.Body>
-            </Card>
+             <SingleCourses key={course.id} course={course}/>
           ))}
         </div>
       </div>

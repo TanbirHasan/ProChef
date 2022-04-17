@@ -10,3 +10,17 @@
     justify-content: space-between;
     padding:90px;
 }
+
+.top-portion{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spoon{
+    width:80px;
+    height:70px;
+    
+    text-align: center;
+}

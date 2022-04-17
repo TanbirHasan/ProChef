@@ -29,7 +29,7 @@
      "duration" : "24 Days",
    
     
-    "price": "89$",
+    "price": "89",
     "img": "Images/pastamaster.jpg"
   },
   {
@@ -54,7 +54,22 @@
     "duration" : "19 days",
     "price": "99",
     "img": "Images/Italianpasta.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Beef Biryai",
+    "duration" : "12 days",
+    "price": "101",
+    "img": "Images/MuttonBiryani.jpg"
+  },
+   {
+    "id": "9",
+    "name": "Grilled Fish",
+    "duration" : "18 days",
+    "price": "110",
+    "img": "Images/GrilledFish.jpg"
   }
+
  
 ]
 
