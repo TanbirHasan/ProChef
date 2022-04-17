@@ -2,6 +2,7 @@ import { Button } from 'react-bootstrap';
 import React, { useRef } from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import "./Register.css"
 
 import {
   useCreateUserWithEmailAndPassword,
@@ -42,12 +43,23 @@ const Register = () => {
     return (
       <div>
         <Header />
-        <div className='socialbutton'>
-          
-
+        <div className="socialbuttondiv">
+          <Button className="socialbutton" onClick={() => signInWithGoogle()}>
+            <i
+              className="fa-brands fa-google"
+              style={{ marginRight: "5px", fontSize: "18px" }}
+            ></i>
+            Google Sign In
+          </Button>
+          <Button className="socialbutton" onClick={() => signInWithGithub()}>
+            <i
+              className="fa-brands fa-github"
+              style={{ marginRight: "5px", fontSize: "18px" }}
+            ></i>
+            Github Sign In
+          </Button>
         </div>
-        <Button>Google Sign In</Button>
-        <Button>Github Sign In</Button>
+
         <div className="FormWrapper">
           <div className="form">
             <form onSubmit={handleSubmit}>
@@ -65,6 +77,7 @@ const Register = () => {
             />
           </div>
         </div>
+        <span className='error' style={{color:"red",fontWeight:"500"}}>{error}</span>
         <Footer />
       </div>
     );

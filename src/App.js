@@ -9,6 +9,8 @@ import Register from "./Pages/Register/Register";
 import Contact from "./Pages/ContactMe/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AccordionButton } from 'react-bootstrap';
+import RequireAuth from './Auth/RequireAuth';
+import Checkout from './Pages/Checkout/Checkout';
 
 
 
@@ -17,11 +19,26 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/courses" element={<Allcourse />}></Route>
+        <Route
+          path="/courses"
+          element={
+            <RequireAuth>
+              <Allcourse />
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
+        <Route
+          path="/checkout"
+          element={
+            <RequireAuth>
+              <Checkout />
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/contact" element={<Contact />}></Route>
       </Routes>
     </div>
