@@ -9,7 +9,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from '../../Auth/firebase.init';
-import Sociallogin from '../SocialLogin/Sociallogin';
+import Sociallogin from "../../components/SocialLogin/Sociallogin";
 
 const Login = () => {
 
