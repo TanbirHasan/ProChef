@@ -1,26 +1,31 @@
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import "./Register.css"
 
 import {
-  useCreateUserWithEmailAndPassword,
+  useCreateUserWithEmailAndPassword, useUpdateProfile,
  
 } from "react-firebase-hooks/auth";
 import auth from "../../Auth/firebase.init"
 import Sociallogin from "../../components/SocialLogin/Sociallogin"
+import { Link } from 'react-router-dom';
 
 
 
 const Register = () => {
+
+  const [agree,setAgree] = useState(false)
 
  
 
 
 
    const [createUserWithEmailAndPassword,user,error] =
-     useCreateUserWithEmailAndPassword(auth);
+     useCreateUserWithEmailAndPassword(auth,{sendEmailVerification : true});
+
+     const [updateProfile,updating,updateerror] = useUpdateProfile(auth)
 
    if (user) {
      console.log(user);
@@ -30,16 +35,23 @@ const Register = () => {
    const emailref = useRef(" ");
    const passref = useRef(" ");
 
-   const handleSubmit = (e) => {
+   const handleSubmit = async (e) => {
      e.preventDefault();
-     const Name = nameref.current.value;
+     const name = nameref.current.value;
      const email = emailref.current.value;
      const password = passref.current.value;
+     const agree = e.target.terms.checked;
+     if(agree){
+           await createUserWithEmailAndPassword(email, password);
+           await updateProfile({ displayName: name });
+           console.log("Updated profile");
+
+     }
 
      console.log(email);
      console.log(password);
 
-     createUserWithEmailAndPassword(email, password);
+
    };
     return (
       <div>
@@ -83,14 +95,23 @@ const Register = () => {
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
+                <Form.Check
+                  type="checkbox" onClick={() => setAgree(!agree)} name="terms" id="terms"
+                  label="Accept Terms and Conditions" className={agree ? 'text-primary' : 'text-dark'}
+                />
               </Form.Group>
-              <Button variant="primary" type="submit">
+              <Button variant="primary" disabled={!agree} type="submit">
                 Submit
               </Button>
             </Form>
           </div>
         </div>
+        <p className='text-center'>
+          Already have an Account?Please{" "}
+          <Link className="link" to="/login">
+            Login
+          </Link>
+        </p>
 
         <span className="error" style={{ color: "red", fontWeight: "500" }}>
           {error}

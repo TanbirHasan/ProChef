@@ -76,6 +76,12 @@ const Login = () => {
             </Form>
           </div>
         </div>
+        <p className="text-center">
+          Don't have an Account?Please{" "}
+          <Link className="link" to="/register">
+            Register
+          </Link>
+        </p>
         <Footer />
       </div>
     );

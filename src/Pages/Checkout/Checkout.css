@@ -1,16 +1,24 @@
 
 
 
+
+.FormWrapper form{
+    display: flex;
+    background-color: #CB4335;
+    flex-direction: column;
+    width: 30%;
+    padding: 30px;
+    color:white;
+    border-radius: 10px;
+    margin: 0px auto;
+}
+.FormWrapper form input{
+    margin-bottom: 10px;
+}
+
 .checkout{
     padding: 60px 0px;
 }
 
-form{
-    color:white;
-
-}
 
 
-form label{
-    margin:10px
-}
