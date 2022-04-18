@@ -3,6 +3,7 @@ import Courses from '../../components/Courses/Courses';
 import Header from "../../components/Header/Header";
 import Slider from "../../components/Slider/Slider";
 import Footer from "../../components/Footer/Footer";
+import Notfound from '../Notfound/Notfound';
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <Slider />
             <Courses/>
             <Footer/>
+          
             
         </div>
     );

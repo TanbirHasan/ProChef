@@ -11,6 +11,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AccordionButton } from 'react-bootstrap';
 import RequireAuth from './Auth/RequireAuth';
 import Checkout from './Pages/Checkout/Checkout';
+import Notfound from './Pages/Notfound/Notfound';
 
 
 
@@ -40,6 +41,7 @@ function App() {
           }
         ></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route exact path="*" element={<Notfound/>}></Route>
       </Routes>
     </div>
   );
