@@ -24,6 +24,30 @@ const Blogs = () => {
                    </ul>
 
                </div>
+               <div className='question'>
+                   <h3>Differnece between authentication vs authorization?</h3>
+                   <span>Authentication means checking an users identity before accessing any private system.On the other handleSubmit
+                       authorization means checking any users authorities to accessing the resourses. It means a user in a facebook can change his own password of his Account.
+                       THat means he is authorized for that. And when he is trying to accessing facebook he needs to be login by his account that is authentication.
+                       Some key point between Authentication vs Authorization
+                   </span>
+                   <div>
+                       <h5>Authentication</h5>
+                       <ul><li>
+                           In authentication process usr are verified
+                           </li>
+                           <li>It is done before Authorization</li>
+                           <li>It needs user login details</li>
+                           </ul>
+                           <h5>Authorization</h5>
+                           <ul>
+                               <li>In authorization process users are validated</li>
+                               <li>It is done after authentication</li>
+                               <li>It needs user priviliges or security levels</li>
+                           </ul>
+                   </div>
+
+               </div>
            </div>
             <Footer/>
         </div>

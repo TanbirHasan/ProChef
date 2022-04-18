@@ -24,3 +24,17 @@
     
     text-align: center;
 }
+
+@media (max-width: 575.98px) {
+
+.WrapperCourse {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+}
+.card{
+    margin: 0px;
+}
+}

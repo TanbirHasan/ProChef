@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../Auth/firebase.init';
 import { signOut } from 'firebase/auth';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 const Header = () => {
       const [user] = useAuthState(auth);
     return (
       <div className="Header">
-        <div className="left">
+        {/* <div className="left">
           <img src={Chef} alt="logo" />
         </div>
         <div className="middle">
@@ -39,7 +40,6 @@ const Header = () => {
               </Link>
             )}
 
-       
             {user ? (
               <button onClick={() => signOut(auth)}>Logout</button>
             ) : (
@@ -60,7 +60,59 @@ const Header = () => {
           <span>
             <i class="fa-solid fa-cart-shopping"></i>
           </span>
-        </div>
+        </div> */}
+
+        <Navbar bg="light" expand="lg" className="w-100">
+          <Container>
+            <Navbar.Brand href="#home">
+              <img src={Chef} alt="chef" className="chef" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ms-auto">
+                <Nav.Link>
+                  <Link to="/" className="link">
+                    Home
+                  </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link to="/courses" className="link">
+                    Courses
+                  </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link to="/blogs" className="link">
+                    Blogs
+                  </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link to="/about" className="link">
+                    About
+                  </Link>
+                </Nav.Link>
+                {user ? (
+                  <span></span>
+                ) : (
+                  <Nav.Link>
+                    <Link to="/register" className="link">
+                      Register
+                    </Link>
+                  </Nav.Link>
+                )}
+
+                {user ? (
+                  <button onClick={() => signOut(auth)}>Logout</button>
+                ) : (
+                  <Nav.Link>
+                    <Link to="/login" className="link">
+                      Login
+                    </Link>
+                  </Nav.Link>
+                )}
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
       </div>
     );
 };

@@ -7,11 +7,11 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyD-AxPDzwpej-39qJ4B71t8-pDoNOjN3eo",
-  authDomain: process.env.REACT_APP_authDomain,
-  projectId: process.env.REACT_APP_projectId,
-  storageBucket: process.env.REACT_APP_storageBucket,
-  messagingSenderId: process.env.REACT_APP_messagingSenderId,
-  appId: process.env.REACT_APP_appId,
+  authDomain: "prochef-b4217.firebaseapp.com",
+  projectId: "prochef-b4217",
+  storageBucket: "prochef-b4217.appspot.com",
+  messagingSenderId: "848624168963",
+  appId: "1:848624168963:web:805fa27d0dce8252f95e36",
 };
 
 // Initialize Firebase
