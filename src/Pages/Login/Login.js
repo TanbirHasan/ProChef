@@ -54,7 +54,7 @@ const Login = () => {
         <Header />
         <Sociallogin />
         <div className="d-flex justify-content-center">
-          <div className="w-50 mt-5">
+          <div className="w-50 mt-5" id="loginform">
             <Form
               className="w-50 mx-auto"
               style={{
@@ -96,7 +96,7 @@ const Login = () => {
             Register
           </Link>
         </p>
-        <p className='text-center'>
+        <p className="text-center">
           Forget Password?
           <button
             onClick={resetPassword}

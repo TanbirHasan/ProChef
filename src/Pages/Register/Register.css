@@ -4,3 +4,10 @@
 
 
 
+@media (max-width: 575.98px) {
+
+    #resigterform{
+        width: 100%!important;
+        margin:10px;
+    }
+}

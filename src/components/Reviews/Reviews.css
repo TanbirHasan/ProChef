@@ -1,0 +1,30 @@
+
+
+
+
+.reviews{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    align-items: center;
+}
+
+.reviews .image img{
+    max-width: 100%;
+}
+
+.reviews .image{
+    margin: 10px;
+}
+
+@media (max-width: 575.98px) {
+    .reviews{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .reviews .image{
+        margin: 0px;
+    }
+
+}

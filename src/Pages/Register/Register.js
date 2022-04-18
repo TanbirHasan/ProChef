@@ -59,7 +59,7 @@ const Register = () => {
         <Sociallogin />
 
         <div className="d-flex justify-content-center">
-          <div className="w-50">
+          <div className="w-50" id="resigterform">
             <Form
               className="w-100 mx-auto"
               style={{
@@ -83,6 +83,7 @@ const Register = () => {
                   type="email"
                   ref={emailref}
                   placeholder="Enter email"
+                  required
                 />
               </Form.Group>
 
@@ -92,6 +93,7 @@ const Register = () => {
                   type="password"
                   ref={passref}
                   placeholder="Password"
+                  required
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicCheckbox">

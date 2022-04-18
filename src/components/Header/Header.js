@@ -77,7 +77,7 @@ const Header = () => {
                 </Nav.Link>
                 <Nav.Link>
                   <Link to="/courses" className="link">
-                    Courses
+                    Service
                   </Link>
                 </Nav.Link>
                 <Nav.Link>

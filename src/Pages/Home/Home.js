@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import Slider from "../../components/Slider/Slider";
 import Footer from "../../components/Footer/Footer";
 import Notfound from '../Notfound/Notfound';
+import Reviews from '../../components/Reviews/Reviews';
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <Header/>
             <Slider />
             <Courses/>
+            <Reviews/>
             <Footer/>
           
             

@@ -3,7 +3,7 @@ import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const SingleCourses = ({course}) => {
-    const {id,img,name,duration,price} = course;
+    const {id,img,name,duration,description,price} = course;
     return (
       <div>
         <Card style={{ width: "18rem", margin: "20px 15px", padding: "5px" }}>
@@ -12,6 +12,7 @@ const SingleCourses = ({course}) => {
             <Card.Title>{name}</Card.Title>
             <Card.Text>Duration : {duration}</Card.Text>
             <Card.Text>Price : {price} $</Card.Text>
+            <Card.Text>Description:{description} $</Card.Text>
             <Link to="/checkout">
               <Button
                 variant="primary"

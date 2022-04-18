@@ -3,12 +3,14 @@
   "  id": "1",
     "name": "Chocolate Desserts",
     "duration" : "Two month",
+    "description":"Do you want to learn how to make chocolate dessert in a easy way.So this is the right place. You can learn what you want...",
     "price": "130",
     "img": "Images/chocolatedesserts.jpg"
   },
   {
     "id": "2",
     "name": "Pizza",
+        "description":"Do you want to learn how to make Pizza in a easy way.So this is the right place. You can learn what you want...",
      "duration" : "one month",
    
     "price": "100",
@@ -18,6 +20,7 @@
     "id": "3",
     "name": "Mexican Food",
      "duration" : "one month",
+         "description":"Do you want to learn how to make Mexican Food in a easy way.So this is the right place. You can learn what you want...",
    
   
     "price": "125",
@@ -27,6 +30,7 @@
     "id": "4",
     "name": "Pasta",
      "duration" : "24 Days",
+         "description":"Do you want to learn how to make Pasta in a easy way.So this is the right place. You can learn what you want...",
    
     
     "price": "89",
@@ -36,6 +40,7 @@
     "id": "5",
     "name": "Toast crossiant Fried Egg",
      "duration" : "1.5 month",
+         "description":"Do you want to learn how to make Toast crossiant fried egg in a easy way.So this is the right place. You can learn what you want...",
   
     
     "price": "169",
@@ -45,6 +50,7 @@
     "id": "6",
     "name": "Ice Creame",
      "duration" : "14 days",
+         "description":"Do you want to learn how to make Ice-cream in a easy way.So this is the right place. You can learn what you want...",
     "price": "60",
     "img": "Images/OriginalIcecream.jpg"
   },
@@ -52,6 +58,7 @@
     "id": "7",
     "name": "Italian Pasta",
     "duration" : "19 days",
+        "description":"Do you want to learn how to make Italian pasta in a easy way.So this is the right place. You can learn what you want...",
     "price": "99",
     "img": "Images/Italianpasta.jpg"
   },
@@ -59,12 +66,14 @@
     "id": "8",
     "name": "Beef Biryai",
     "duration" : "12 days",
+        "description":"Do you want to learn how to make Mutton biryani in a easy way.So this is the right place. You can learn what you want...",
     "price": "101",
     "img": "Images/MuttonBiryani.jpg"
   },
    {
     "id": "9",
     "name": "Grilled Fish",
+        "description":"Do you want to learn how to make Grileld Fish in a easy way.So this is the right place. You can learn what you want...",
     "duration" : "18 days",
     "price": "110",
     "img": "Images/GrilledFish.jpg"
